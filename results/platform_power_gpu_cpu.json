@@ -1,0 +1,36 @@
+{
+ "note": "detector ตัวเดียวกับ Table V, batch 1, input 320x320",
+ "gpu_idle_W": 8.81,
+ "date": "2026-09-25 08:04",
+ "gpu_fp32_throughput": {
+  "mode": "throughput",
+  "iters": 1000,
+  "fps": 248.55915175477642,
+  "ms_per_frame": 4.023187208920717,
+  "power_W_mean": 116.26,
+  "power_W_max": 126.61,
+  "gpu_util_mean": 99.0,
+  "fps_per_W": 2.138
+ },
+ "gpu_fp32_latency": {
+  "iters": 1000,
+  "mean_ms": 3.986140096676536,
+  "p50_ms": 3.8900585495866835,
+  "p95_ms": 4.588596831308678,
+  "p99_ms": 4.789250270696357,
+  "fps": 175.70309756031955,
+  "power_W_mean": 102.1,
+  "power_W_max": 127.06,
+  "power_W_idle_before": 8.81,
+  "gpu_util_mean": 70.6,
+  "fps_per_W": 1.721
+ },
+ "cpu_fp32": {
+  "mode": "throughput",
+  "iters": 250,
+  "fps": 39.718791963269474,
+  "ms_per_frame": 25.176999364048243,
+  "power_note": "RAPL ใช้ไม่ได้บนเครื่องนี้ (kernel 5.4 ไม่รองรับ Raptor Lake) i7-13700 spec: PL1 65 W / PL2 219 W → 65 W เป็นขอบล่าง",
+  "threads": 24
+ }
+}

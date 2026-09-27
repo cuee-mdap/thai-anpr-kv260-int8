@@ -1,0 +1,18 @@
+{
+ "source": "outputs/e4_653/MCNEMAR_4CFG_20260703.txt",
+ "n_scenes": 648,
+ "discordant_detaug_only": 21,
+ "discordant_last_only": 10,
+ "discordant_total": 31,
+ "p_exact_two_sided": 0.0708,
+ "odds_ratio": 2.1,
+ "or_ci95": [
+  0.947,
+  4.994
+ ],
+ "discordant_rate_pct": 4.78,
+ "discordant_pairs_for_80pct_power": 60,
+ "scenes_for_80pct_power": 1255,
+ "observed_power_at_n648": 0.507,
+ "interpretation": "not significant at alpha=0.05; indicative only"
+}

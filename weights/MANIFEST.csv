@@ -1,0 +1,49 @@
+group,path,size_MB,md5_12
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation/base_seed0/yolov7_tiny_small_best.pth,2.57,dbc338ad0803
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation/base_seed1/yolov7_tiny_small_best.pth,2.57,86831082132b
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation/base_seed2/yolov7_tiny_small_best.pth,2.57,d864ab8d06ea
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation/plus_seed0/yolov7_tiny_small_best.pth,5.48,a4838c09d099
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation/plus_seed1/yolov7_tiny_small_best.pth,5.48,9058eda843c0
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation/plus_seed2/yolov7_tiny_small_best.pth,5.48,2244ff708013
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation2/base_seed3/yolov7_tiny_small_best.pth,2.57,0d4d10acd189
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation2/base_seed4/yolov7_tiny_small_best.pth,2.57,7187941693a1
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation2/base_seed5/yolov7_tiny_small_best.pth,2.57,3cb9e849127e
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation2/basewide_seed0/yolov7_tiny_small_best.pth,5.71,9c41ac04b6e4
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation2/basewide_seed1/yolov7_tiny_small_best.pth,5.71,6d2516ad534f
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation2/basewide_seed2/yolov7_tiny_small_best.pth,5.71,928263353f33
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/base_seed6/yolov7_tiny_small_best.pth,2.57,e57bdfa07c8f
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/base_seed7/yolov7_tiny_small_best.pth,2.57,084f26da1a80
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/base_seed8/yolov7_tiny_small_best.pth,2.57,4e79d195549e
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/base_seed9/yolov7_tiny_small_best.pth,2.57,c8e4555a4072
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/basewide_seed3/yolov7_tiny_small_best.pth,5.71,b132927b6040
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/basewide_seed4/yolov7_tiny_small_best.pth,5.71,98a09f0804f5
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/basewide_seed5/yolov7_tiny_small_best.pth,5.71,283296693458
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/plus_seed3/yolov7_tiny_small_best.pth,5.48,35603411aade
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/plus_seed4/yolov7_tiny_small_best.pth,5.48,2d26ca098318
+"detector ablation (Plus/base/Base-Wide, all seeds)",runs/ablation3/plus_seed5/yolov7_tiny_small_best.pth,5.48,18211ffee9a7
+detector QAT,runs/qat/_keycheck_plus/yolov7_tiny_small_best.pth,5.47,f694163de426
+detector QAT,runs/qat/base_seed1/yolov7_tiny_small_best.pth,2.57,070edc8ef93e
+detector QAT,runs/qat/base_seed1_lr1e-6/yolov7_tiny_small_best.pth,2.57,706120047853
+detector QAT,runs/qat/base_seed1_lr3e-5/yolov7_tiny_small_best.pth,2.57,4273c3f4aad7
+detector QAT,runs/qat/base_seed2/yolov7_tiny_small_best.pth,2.57,032d2731ced7
+detector QAT,runs/qat/base_seed4/yolov7_tiny_small_best.pth,2.57,dd5c3e858352
+detector QAT,runs/qat/e2d_base_seed1/yolov7_tiny_small_best.pth,2.57,74c0157d7768
+detector QAT,runs/qat/e2d_plus_seed0/yolov7_tiny_small_best.pth,5.47,935063de2461
+detector QAT,runs/qat/e2e_base_seed1/yolov7_tiny_small_best.pth,2.57,1c314d236947
+detector QAT,runs/qat/e2e_plus_seed0/yolov7_tiny_small_best.pth,5.47,ee833aaf0709
+detector QAT,runs/qat/plus_seed0/yolov7_tiny_small_best.pth,5.47,ede48505e2d3
+detector baseline YOLOv4-tiny,runs/baseline_int8/v4tiny_seed0/yolov7_tiny_small_best.pth,5.64,cfc3cbf04599
+detector baseline YOLOv4-tiny,runs/baseline_int8/v4tiny_seed1/yolov7_tiny_small_best.pth,5.64,432916527e33
+detector baseline YOLOv4-tiny,runs/baseline_int8/v4tiny_seed2/yolov7_tiny_small_best.pth,5.64,0496d58303e2
+recognizer seeds,runs/ocr_ablation/conv_seed0/last_model.pth,32.05,115aa07822ae
+recognizer seeds,runs/ocr_ablation/conv_seed1/last_model.pth,32.05,995a1c83f574
+recognizer seeds,runs/ocr_ablation/conv_seed2/last_model.pth,32.05,995c73c072cb
+recognizer seeds,runs/ocr_ablation/seed0/last_model.pth,32.05,a4dc3e252340
+recognizer seeds,runs/ocr_ablation/seed1/last_model.pth,32.05,bd049e5f5c58
+recognizer seeds,runs/ocr_ablation/seed2/last_model.pth,32.05,221f2d44ae9e
+recognizer baseline LPRNet,runs/ocr_baseline_int8/lprnet_seed0/float_model/last_model.pth,1.84,5bd5b081b6a9
+recognizer baseline LPRNet,runs/ocr_baseline_int8/lprnet_seed1/float_model/last_model.pth,1.84,925ca7eb4ec8
+recognizer baseline LPRNet,runs/ocr_baseline_int8/lprnet_seed2/float_model/last_model.pth,1.84,cfdee115e3d4
+deployed models,deploy/202501finalkv260000/kv260_yolov7_ocr/dt_model.xmodel,2.06,3c6dd4e7ccd6
+deployed models,deploy/202501finalkv260000/kv260_yolov7_ocr/lpr_model.xmodel,8.28,c65f36a03827
+deployed models,deploy/202501finalkv260000/kv260_yolov7_ocr/lpr_model_OLD_best_model.xmodel,8.28,ce33140c544f

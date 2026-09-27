@@ -1,0 +1,46 @@
+# --- model weights (FP32 checkpoints are listed with MD5 in weights/MANIFEST.csv, not committed) ---
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.tar
+*.tar.gz
+*.zip
+# หมายเหตุ: ไฟล์ .xmodel (INT8 ที่ compile แล้ว 4 ตัว) ตั้งใจ commit ไว้ในรีโปนี้
+
+# --- raw data / imagery: ป้ายทะเบียนไทยเป็นข้อมูลส่วนบุคคลตาม PDPA ห้ามเผยแพร่ ---
+data/
+datasets/
+images/
+labels/
+crops/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.mp4
+*.avi
+
+# --- per-scene outputs ที่ยังมีข้อความป้าย (เฉพาะฉบับที่แปลงเป็นถูก/ผิดแล้วจึง commit) ---
+*_raw.json
+paired_test*.json
+per_image_4cfg.json
+
+# --- python / editor / env ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.env.*
+.DS_Store
+.vscode/
+.idea/
+
+# --- build & log ---
+*.log
+*.aux
+build/
+dist/

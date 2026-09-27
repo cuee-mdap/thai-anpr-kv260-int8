@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this software or the released artefacts, please cite the article below."
+title: "INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition — artefacts"
+abstract: >-
+  Scripts, calibration configurations, compiled INT8 models and per-run result files behind the
+  paper "INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition: A Two-Stage Thai
+  ANPR System on the AMD Kria KV260". Includes the multi-seed csp4 ablation, the quantization-aware
+  training comparison, per-layer activation statistics with simulated INT8 SQNR, on-board latency
+  and power measurements on a Kria KV260, and a cross-domain replication on CCPD2020 and Open
+  Images V7.
+type: software
+license: MIT
+authors:
+  - family-names: Ruangsang
+    given-names: Watchara
+    affiliation: "King Mongkut's University of Technology Thonburi (KMUTT), Bangkok, Thailand"
+  - family-names: Aramvith
+    given-names: Supavadee
+    affiliation: "Chulalongkorn University, Bangkok, Thailand"
+keywords:
+  - INT8 quantization
+  - post-training quantization
+  - edge FPGA
+  - Kria KV260
+  - DPUCZDX8G
+  - Vitis-AI
+  - licence plate recognition
+  - Thai ANPR
+  - YOLOv7-tiny
+  - CRNN
+  - CTC
+repository-code: "https://github.com/cuee-mdap/thai-anpr-kv260-int8"
+preferred-citation:
+  type: article
+  title: >-
+    INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition:
+    A Two-Stage Thai ANPR System on the AMD Kria KV260
+  authors:
+    - family-names: Ruangsang
+      given-names: Watchara
+    - family-names: Aramvith
+      given-names: Supavadee
+  journal: "IEEE Access"
+  year: 2026
+  notes: "under revision"

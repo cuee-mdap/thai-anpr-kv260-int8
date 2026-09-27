@@ -1,0 +1,5 @@
+model,variant,precision,mAP50,mAP75,mAP5095
+base_seed1,base,FP32-after-QAT,77.50,19.60,33.10
+base_seed1,base,INT8,1.40,0.00,0.20
+plus_seed0,plus,FP32-after-QAT,86.00,35.40,42.80
+plus_seed0,plus,INT8,84.50,20.60,38.50

@@ -1,0 +1,75 @@
+================================================================================
+PART 1 — SOURCE CODE AND CONFIGURATION FILES
+Applies to: scripts/, configs/, and this repository's documentation
+================================================================================
+
+MIT License
+
+Copyright (c) 2026 Watchara Ruangsang and Supavadee Aramvith
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+PART 2 — MODEL WEIGHTS
+Applies to: weights/*.xmodel (compiled INT8 models) and the FP32 checkpoints
+listed in weights/MANIFEST.csv
+================================================================================
+
+These models were trained on a proprietary Thai licence-plate dataset provided
+by an industrial partner. The dataset itself is not redistributed. The weights
+are released under the following terms:
+
+  Permitted use ..........: Non-commercial research and teaching, including
+                            reproduction and verification of the results
+                            reported in the article.
+
+  Attribution ............: Cite the IEEE Access article listed in
+                            CITATION.cff in any publication, thesis or
+                            software that uses the weights or results
+                            derived from them.
+
+  Redistribution .........: Permitted for non-commercial purposes only, with
+                            this notice and the attribution requirement
+                            attached. Modified versions must be clearly
+                            marked as modified.
+
+  Commercial use .........: Not permitted without prior written permission
+                            from the authors and Design Gateway Co., Ltd.
+
+  Contact for permissions : Supavadee Aramvith (corresponding author),
+                            supavadee.a@chula.ac.th
+
+  Warranty ...............: The weights are provided "as is", without warranty
+                            of any kind. The authors accept no liability for
+                            any use of them.
+
+These terms correspond to the Creative Commons Attribution-NonCommercial 4.0
+International licence (CC BY-NC 4.0), https://creativecommons.org/licenses/by-nc/4.0/
+
+================================================================================
+PART 3 — THIRD-PARTY MATERIAL
+================================================================================
+
+The dataset preparation scripts download data from third parties under their own
+licences, which are not altered by this repository:
+
+  * Open Images V7 (class "Vehicle registration plate") — annotations CC BY 4.0,
+    images under their respective licences; see the Open Images website.
+  * CCPD / CCPD2020 — see the terms published by its maintainers.
+  * OpenALPR benchmark images — see the terms published by its maintainers.
