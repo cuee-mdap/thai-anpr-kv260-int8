@@ -1,0 +1,26 @@
+{
+  "upload_type": "software",
+  "title": "INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition: artefacts",
+  "description": "<p>Scripts, calibration configurations, compiled INT8 models and per-run result files behind the paper \"INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition: A Two-Stage Thai ANPR System on the AMD Kria KV260\" (IEEE Access, under revision, manuscript Access-2026-35199).</p><p>Includes the multi-seed csp4 ablation, the quantization-aware training comparison, per-layer activation statistics with simulated INT8 SQNR, on-board latency and power measurements on a Kria KV260, and a cross-domain replication on CCPD2020 and Open Images V7.</p><p>Licensing: scripts, configurations and documentation are under the MIT License; the compiled model weights in weights/ are under CC BY-NC 4.0 with the additional terms stated in the LICENSE file.</p>",
+  "creators": [
+    {
+      "name": "Ruangsang, Watchara",
+      "affiliation": "King Mongkut's University of Technology Thonburi (KMUTT)"
+    },
+    {
+      "name": "Aramvith, Supavadee",
+      "affiliation": "Chulalongkorn University"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "access_right": "open",
+  "keywords": [
+    "INT8 quantization",
+    "post-training quantization",
+    "edge FPGA",
+    "Kria KV260",
+    "Vitis-AI",
+    "license plate recognition",
+    "Thai ANPR"
+  ]
+}
