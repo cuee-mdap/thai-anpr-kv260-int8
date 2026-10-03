@@ -1,5 +1,7 @@
 # INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23120165.svg)](https://doi.org/10.5281/zenodo.23120165)
+
 Code, configurations, compiled INT8 models and per-run results behind the paper:
 
 > **INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition:
@@ -141,7 +143,8 @@ Please cite the article:
 If you use the cross-domain preparation scripts, please also cite Open Images V7 and CCPD as the
 dataset sources. Machine-readable metadata for this repository is in `CITATION.cff`.
 
-Repository: https://github.com/cuee-mdap/thai-anpr-kv260-int8
+Repository: https://github.com/cuee-mdap/thai-anpr-kv260-int8  
+Archived release v1.0.0: https://doi.org/10.5281/zenodo.23120165
 
 ## License
 

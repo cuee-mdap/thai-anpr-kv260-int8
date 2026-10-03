@@ -16,6 +16,7 @@ license:
   - CC-BY-NC-4.0
 license-url: "https://github.com/cuee-mdap/thai-anpr-kv260-int8/blob/main/LICENSE"
 version: "1.0.0"
+doi: 10.5281/zenodo.23120165
 date-released: "2026-10-02"
 authors:
   - family-names: Ruangsang
