@@ -1,5 +1,5 @@
 {
- "note": "detector ตัวเดียวกับ Table V, batch 1, input 320x320",
+ "note": "same detector as Table 5, batch 1, input 320x320",
  "gpu_idle_W": 8.81,
  "date": "2026-09-25 08:04",
  "gpu_fp32_throughput": {
@@ -30,7 +30,7 @@
   "iters": 250,
   "fps": 39.718791963269474,
   "ms_per_frame": 25.176999364048243,
-  "power_note": "RAPL ใช้ไม่ได้บนเครื่องนี้ (kernel 5.4 ไม่รองรับ Raptor Lake) i7-13700 spec: PL1 65 W / PL2 219 W → 65 W เป็นขอบล่าง",
+  "power_note": "RAPL unavailable on this host (kernel 5.4 does not support Raptor Lake); i7-13700 spec: PL1 65 W / PL2 219 W, so 65 W is a lower bound. Superseded by the wall-plug measurement in results/wallplug_power.csv (161.40 W).",
   "threads": 24
  }
 }

@@ -9,7 +9,14 @@ abstract: >-
   and power measurements on a Kria KV260, and a cross-domain replication on CCPD2020 and Open
   Images V7.
 type: software
-license: MIT
+# Part 1 of LICENSE (scripts/, configs/, documentation) is MIT; Part 2 (model weights)
+# is CC BY-NC 4.0 with the additional terms stated in the LICENSE file.
+license:
+  - MIT
+  - CC-BY-NC-4.0
+license-url: "https://github.com/cuee-mdap/thai-anpr-kv260-int8/blob/main/LICENSE"
+version: "1.0.0"
+date-released: "2026-10-02"
 authors:
   - family-names: Ruangsang
     given-names: Watchara
@@ -42,4 +49,4 @@ preferred-citation:
       given-names: Supavadee
   journal: "IEEE Access"
   year: 2026
-  notes: "under revision"
+  notes: "under revision (manuscript ID Access-2026-35199)"

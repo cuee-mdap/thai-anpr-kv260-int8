@@ -1,0 +1,5 @@
+model,seed,plate_acc_all_pct,plate_acc_detected_pct,det_rate_pct,mean_iou,frac_iou_ge_075
+MSE_deployed,-,84.57,87.96,96.14,0.7713,67.09
+CIoU,0,88.27,91.08,96.91,0.8155,79.78
+CIoU,1,80.56,83.25,96.76,0.7538,53.75
+CIoU,2,81.94,84.42,97.07,0.7284,47.22

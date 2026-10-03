@@ -1,6 +1,7 @@
 {
- "note": "anchor sets actually used. Thai is the deployed set; CCPD and OID were refitted by k-means (scripts/fit_anchors.py) for the cross-domain experiment of Section VI.E. Format: [w, h] in grid cells at 320x320 input.",
- "thai_deployed": [
+ "note": "anchor sets used in this work. The Thai set is the deployed one and is ALSO the set that produced every cross-domain number reported in the paper (runs/e6_ood/run_e6.sh does not set ANCHORS, so the default Thai set applies). The CCPD and Open Images sets below were fitted by k-means (scripts/fit_anchors.py) for the supplementary anchor experiment of Section VI.E; only the Open Images variant of that experiment was completed. Format: [w, h] in grid cells at 320x320 input.",
+ "how_to_use": "export ANCHORS=\"11.7,2.4;16.1,3.1;22.0,3.9\" before scripts/y_a_train.py, scripts/finetune_public.py or scripts/y_b_qt.py; unset = Thai deployed set",
+ "thai_deployed_and_used_for_all_reported_numbers": [
   [
    10.0,
    13.0
@@ -14,7 +15,7 @@
    23.0
   ]
  ],
- "ccpd2020_refit": [
+ "ccpd2020_refit_not_used_in_reported_numbers": [
   [
    11.7,
    2.4
@@ -28,7 +29,7 @@
    3.9
   ]
  ],
- "open_images_v7_refit": [
+ "open_images_v7_refit_supplementary_experiment_only": [
   [
    1.6,
    1.3
@@ -41,6 +42,5 @@
    11.0,
    5.0
   ]
- ],
- "how_to_use": "export ANCHORS=\"11.7,2.4;16.1,3.1;22.0,3.9\" before scripts/y_a_train.py, scripts/finetune_public.py or scripts/y_b_qt.py; unset = Thai deployed set"
+ ]
 }

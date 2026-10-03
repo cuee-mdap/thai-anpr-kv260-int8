@@ -1,0 +1,5 @@
+model,precision,mAP50,mAP75,mAP5095
+base_seed6,FP32,70.30,21.70,31.40
+base_seed6,INT8,53.50,6.40,17.20
+plus_seed1,FP32,11.90,0.20,2.50
+plus_seed1,INT8,16.20,0.20,3.30

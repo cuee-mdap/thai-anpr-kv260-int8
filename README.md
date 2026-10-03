@@ -17,10 +17,10 @@ instead of the recognized text, because Thai plate numbers are personal data (se
 
 | folder | contents |
 |---|---|
-| `scripts/` | 19 scripts: training, INT8 post-training quantization, quantization-aware training, evaluation, activation analysis, dataset preparation and on-board measurement |
+| `scripts/` | 31 scripts: training, INT8 post-training quantization, quantization-aware training, evaluation, activation analysis, dataset preparation and on-board measurement |
 | `configs/` | calibration configurations (entropy, entropy + power-of-two, percentile) and the anchor sets; min–max is the toolchain default and needs no file — see `configs/README.md` |
 | `weights/` | the four compiled INT8 `.xmodel` files that run on the board, plus `MANIFEST.csv` listing all 48 FP32 checkpoints with sizes and MD5 checksums |
-| `results/` | 16 result files: per-seed, per-layer and per-scene outputs behind Tables I–VI and Figs. 7–11 |
+| `results/` | 21 result files: per-seed, per-layer and per-scene outputs behind Tables 1–9 and Figs. 7–11 |
 
 ## Environment
 
@@ -56,7 +56,7 @@ python scripts/b.train.py                                      # CRNN + CTC (dep
 python scripts/models_ocr_baseline.py                          # LPRNet-style deployable peer
 python scripts/c.qt.py --calib_split train --calib_size 100     # INT8 PTQ + sensitivity sweep
 
-# ---- quantization-aware training (Table III) ----
+# ---- quantization-aware training (Table 3) ----
 python scripts/y_c_qat.py --ckpt runs/base_seed0/yolov7_tiny_small_best.pth \
        --no_csp4 --epochs 30 --lr 3e-5 --out_dir runs/qat_base
 
@@ -72,11 +72,11 @@ ANCHORS="11.7,2.4;16.1,3.1;22.0,3.9" python scripts/finetune_public.py \
 python scripts/collect_e6.py
 
 # ---- on board (run these on the KV260) ----
-python scripts/kv260_tail_latency.py --iters 1000     # Table IV incl. p95/p99/p99.9
+python scripts/kv260_tail_latency.py --iters 1000     # Table 4 incl. p95/p99/p99.9
 python scripts/kv260_power_bench.py                   # INA260 power, whole SOM
 python scripts/run_e2e_int8.py                        # end-to-end INT8 over the test scenes
 
-# ---- host-side GPU/CPU comparison (Table V) ----
+# ---- host-side GPU/CPU comparison (Table 5) ----
 python scripts/bench_platform_power.py                # throughput and NVML power in one loop
 ```
 
@@ -87,18 +87,23 @@ cross-domain experiment runs end to end from public data alone (CCPD2020 and Ope
 
 | paper item | result file | produced by |
 |---|---|---|
-| Table I — detection accuracy, proposed vs YOLOv4-tiny peer | `results/ablation_per_seed.csv`, `results/baseline_yolov4tiny.csv` | `y_a_train.py` → `y_b_qt.py`, `models_baseline.py` |
-| Table II — recognizer vs LPRNet peer and EasyOCR | `results/baseline_lprnet.csv`, `results/recognizer_int8_sensitivity.csv` | `models_ocr_baseline.py`, `b.train.py`, `c.qt.py` |
-| Table III — csp4 ablation (22 seeds) + QAT rows | `results/ablation_per_seed.csv`, `results/ablation_summary.json`, `results/qat_paired.csv` | `y_a_train.py`, `y_b_qt.py`, `y_c_qat.py`, `aggregate_ablation.py` |
-| Table IV — on-board latency, p95/p99/p99.9, application level | `results/tail_latency.json`, `results/tail_latency_breakdown.json` | `kv260_tail_latency.py` |
-| Table V — cross-platform throughput and power | `results/platform_power_gpu_cpu.json` (+ board rows of `tail_latency.json`) | `bench_platform_power.py`, `kv260_power_bench.py` |
-| Table VI — end-to-end accuracy and the McNemar tests | `results/mcnemar_per_scene_4cfg.csv`, `results/mcnemar_power.json`, `results/board_int8_e2e_per_scene.json` | `run_e2e_int8.py` |
+| Table 1 — detection accuracy, proposed vs YOLOv4-tiny peer | `results/ablation_per_seed.csv`, `results/baseline_yolov4tiny.csv` (FP32 rows are transcribed from each run's `float.log` at the precision pycocotools prints, so they carry one decimal where the INT8 rows carry two) | `y_a_train.py` → `y_b_qt.py`, `models_baseline.py` |
+| Table 2 — recognizer vs LPRNet peer and EasyOCR | `results/baseline_lprnet.csv`, `results/recognizer_int8_sensitivity.csv` | `models_ocr_baseline.py`, `b.train.py`, `c.qt.py` |
+| Table 3 — csp4 ablation (22 seeds) + QAT rows | `results/ablation_per_seed.csv`, `results/ablation_summary.json`, `results/qat_paired.csv` | `y_a_train.py`, `y_b_qt.py`, `y_c_qat.py`, `aggregate_ablation.py` |
+| Table 4 — on-board latency, p95/p99/p99.9, application level | `results/tail_latency.json`, `results/tail_latency_breakdown.json` | `kv260_tail_latency.py` |
+| Table 5 — cross-platform throughput and power | `results/platform_power_gpu_cpu.json` (+ board rows of `tail_latency.json`) | `bench_platform_power.py`, `kv260_power_bench.py` |
+| Table 6 — end-to-end accuracy and the McNemar tests | `results/mcnemar_per_scene_4cfg.csv`, `results/mcnemar_power.json`, `results/board_int8_e2e_per_scene.json` | `run_e2e_int8.py` |
 | Fig. 7 — ablation across IoU thresholds | `results/ablation_per_seed.csv` | `aggregate_ablation.py` |
 | Fig. 8 — SQNR along the network, head-input distribution | `results/activation_per_layer.csv`, `results/activation_prehead_summary.csv` | `act_stats.py` |
 | Figs. 9–10 — on-board efficiency and latency breakdown | `results/tail_latency.json`, `results/tail_latency_breakdown.json` | `kv260_tail_latency.py` |
 | Fig. 11 — platform comparison | `results/platform_power_gpu_cpu.json` | `bench_platform_power.py` |
-| Section V.F — IoU versus reading accuracy, per scene | `results/iou_vs_accuracy_per_scene.csv` | `iou_coupling.py` |
-| Section VI.E — cross-domain CCPD2020 and Open Images | `results/cross_domain_ccpd_oid.csv` | `prepare_ccpd.py`, `prepare_oid_plates.py`, `fit_anchors.py`, `finetune_public.py`, `collect_e6.py` |
+| Table 7 and Section V.F — IoU versus reading accuracy, per scene | `results/iou_vs_accuracy_per_scene.csv` | `iou_coupling.py` |
+| Table 8 and Section VI.E — cross-domain CCPD2020 and Open Images | `results/cross_domain_ccpd_oid.csv` (the article quotes mAP@0.5; the stricter thresholds of the FP32 rows are transcribed from each run's `float.log`) | `prepare_ccpd.py`, `prepare_oid_plates.py`, `fit_anchors.py`, `finetune_public.py`, `collect_e6.py` |
+| Table 3, box-loss control row — CIoU instead of MSE, three seeds | `results/box_loss_ciou.csv` | `y_a_train_ciou.py` (CIoU box loss; `test_ciou_loss.py` checks it against torchvision), `run_s1_ciou.sh` |
+| Section V.C, box-loss control end to end on the board — CIoU vs deployed MSE over the 648 transcribed scenes | `results/e2e_board_ciou.csv` | `run_e2e_int8.py`, `score_e2e.py` |
+| Table 3, QAT rows — second seed per architecture | `results/qat_second_seed.csv`, `results/qat_paired.csv` | `y_c_qat.py`, `qat_s2_eval.sh` |
+| Table 5 and Fig. 11 — wall-plug power for all three platforms | `results/wallplug_power.csv` (the rows for the two unused outlets read 0.0 W and carry no power factor, and are kept as the channel-isolation check) | `shelly_logger.py` (1 Hz per-outlet logging), `wallplug_load.py`, `run_s3_campaign.sh`, `summarize_wallplug.py` |
+| Table 8 (all three blocks) and Section VI.E, anchor study on Open Images | `results/cross_domain_anchor_study.csv` | `run_b2_full.sh`, `parse_b2_logs.py`, `fit_anchors.py` |
 | Deployed INT8 models | `weights/dt_model.xmodel` (detector), `weights/lpr_model.xmodel` (recognizer), `weights/dt_v4tiny_seed0.xmodel`, `weights/lpr_baseline_seed0.xmodel` (peers) | `y_b_qt.py`/`c.qt.py` → `vai_c_xir` |
 | All 48 FP32 checkpoints (sizes + MD5) | `weights/MANIFEST.csv` | — |
 
@@ -137,7 +142,7 @@ Please cite the article:
 If you use the cross-domain preparation scripts, please also cite Open Images V7 and CCPD as the
 dataset sources. Machine-readable metadata for this repository is in `CITATION.cff`.
 
-Repository: https://github.com/cuee-mdap/thai-anpr-kv260-int8 (citable snapshot: release `v1.0.0`)
+Repository: https://github.com/cuee-mdap/thai-anpr-kv260-int8
 
 ## License
 
