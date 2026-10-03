@@ -1,6 +1,6 @@
 # INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition
 
-Code, configurations, compiled INT8 models and per-run results behind the paper
+Code, configurations, compiled INT8 models and per-run results behind the paper:
 
 > **INT8-Quantization Robustness for Edge-FPGA License-Plate Recognition:
 > A Two-Stage Thai ANPR System on the AMD Kria KV260**
@@ -120,9 +120,8 @@ recognized text. Concretely, in this repository:
 * the example training log in `scripts/b.train.py` keeps its loss and accuracy lines but its
   per-sample `Predict / Label` lines were removed for the same reason.
 
-FP32 checkpoints (48 files, 366 MB) exceed what belongs in a code repository; `weights/MANIFEST.csv`
-lists every one with its size and MD5 so that a copy can be verified, and they accompany the
-archived record of this repository.
+FP32 checkpoints (48 files, 366 MB) exceed what belongs in a code repository and are not included
+here; `weights/MANIFEST.csv` lists every one with its size and MD5 so that a copy can be verified.
 
 ## How to cite
 
